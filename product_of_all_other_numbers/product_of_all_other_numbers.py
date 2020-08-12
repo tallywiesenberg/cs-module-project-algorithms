@@ -8,9 +8,9 @@ def product_of_all_other_numbers(arr):
     
     products = []
 
-    for i in range(len(arr)-1):
+    for i in range(len(arr)):
         copy = arr
-        copy.pop(i)
+        copy.remove(copy[i])
         product = [1*i for i in copy]
         products.append(product)
         
