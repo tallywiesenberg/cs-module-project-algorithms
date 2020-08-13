@@ -2,10 +2,24 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
+import math
 
-    pass
+def product_of_all_other_numbers(arr):
+    
+    products = []
+
+    for i in range(len(arr)):
+        copy = arr
+        copy.remove(copy[i])
+        product = [1*i for i in copy]
+        products.append(product)
+        
+    
+    # for i in range(len(arr)):
+    #     copy = arr
+    #     copy.pop(i)
+    #     products.append(math.prod(copy))
+
 
 
 if __name__ == '__main__':
